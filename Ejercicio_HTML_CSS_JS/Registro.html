@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registro</h2>
+        <form id="registerForm">
+
+            <!-- Email -->
+            <label for="email"><b>Correo electrónico:</b></label>
+            <div class="input-group">
+                <input type="email" id="email" name="email" autocomplete="off" placeholder="video_anime@example.com"
+                    required>
+            </div>
+
+            <!-- Nombre de usuario -->
+            <label for="alias"><b>Nombre de usuario:</b></label>
+            <div class="input-group">
+                <input type="text" id="alias" name="alias" autocomplete="off" placeholder="VideoAnime" required>
+            </div>
+
+            <!-- Contraseña -->
+            <label for="password"><b>Contraseña:</b><i>(Minimo 8 caracteres, entre ellos una mayúscula y una
+                    minúscula)</i></label>
+            <div class="input-group">
+                <input type="password" id="password" name="password" autocomplete="off" placeholder="Va123456" required>
+            </div>
+
+            <!-- Fecha de nacimiento -->
+            <label for="birthdate"><b>Fecha de nacimiento:</b></label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <!-- Selección de categorías -->
+            <label><b>Categorías de anime preferidas:</b></label>
+            <div id="categories-group">
+                <div class="categories-column">
+                    <label><input type="checkbox" name="categories" value="accion"> Acción</label>
+                    <label><input type="checkbox" name="categories" value="aventura"> Aventura</label>
+                    <label><input type="checkbox" name="categories" value="comedia"> Comedia</label>
+                    <label><input type="checkbox" name="categories" value="drama"> Drama</label>
+                </div>
+                <div class="categories-column">
+                    <label><input type="checkbox" name="categories" value="fantasia"> Fantasía</label>
+                    <label><input type="checkbox" name="categories" value="romance"> Romance</label>
+                    <label><input type="checkbox" name="categories" value="terror"> Terror</label>
+                    <label><input type="checkbox" name="categories" value="deportes"> Deportes</label>
+                    <label style="visibility:hidden"><input type="checkbox" disabled></label>
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" id="news" name="news">
+                Quiero recibir noticias en mi correo
+            </label>
+
+            <button type="submit">Darse de alta</button>
+        </form>
+        <div id="message" class="error-message"></div>
+    </div>
+</body>
+
+</html>
